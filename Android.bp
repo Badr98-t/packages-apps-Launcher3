@@ -171,6 +171,7 @@ android_library {
         "view_capture",
         "libGoogleFeed",
         "SettingsLib",
+        "co.aospa.framework",
         "bcsmartspace-google",
         "SystemUIPluginLib",
         "animationlib"

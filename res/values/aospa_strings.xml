@@ -75,4 +75,10 @@
     <string name="hide_top_shadow_title">Hide top shadow</string>
     <string name="hide_top_shadow_summary">Remove shadow underneath the status bar</string>
 
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
+
+    <!-- Font size -->
+    <string name="font_size_title">Font size</string>
+
 </resources>
