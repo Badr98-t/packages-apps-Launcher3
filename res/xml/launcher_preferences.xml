@@ -177,6 +177,13 @@
         android:key="recents_category"
         android:title="@string/category_recents">
 
+        <SwitchPreferenceCompat
+            android:key="pref_recents_lock"
+            android:title="@string/recents_lock_title"
+            android:defaultValue="true"
+            android:persistent="true"
+            launcher:iconSpaceReserved="false" />            
+
         <SwitchPreference
             android:key="pref_recents_screenshot"
             android:title="@string/recents_screenshot_title"
