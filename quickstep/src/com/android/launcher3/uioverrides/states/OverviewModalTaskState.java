@@ -48,7 +48,7 @@ public class OverviewModalTaskState extends OverviewState {
     @Override
     public int getVisibleElements(Launcher launcher) {
         boolean clearAll = LauncherPrefs.getPrefs(launcher).getBoolean("pref_recents_clear_all", true);
-        return OVERVIEW_ACTIONS | (!clearAll ? CLEAR_ALL_BUTTON : 0);
+        return OVERVIEW_ACTIONS | MEMINFO | (!clearAll ? CLEAR_ALL_BUTTON : 0);
     }
 
     @Override

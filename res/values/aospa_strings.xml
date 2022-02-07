@@ -17,7 +17,7 @@
 */
 -->
 
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Folder titles -->
     <string name="google_folder_title" translatable="false">Google</string>
@@ -103,4 +103,7 @@
     <string name="background_blur_title">Background blur depth</string>
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
 
+
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s Available | %2$s Total</string>
 </resources>
