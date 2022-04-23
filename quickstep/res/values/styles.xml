@@ -79,7 +79,7 @@
     <style name="TextAppearance.GestureTutorial.Dialog.Title"
         parent="TextAppearance.GestureTutorial.Feedback.Title">
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
         <item name="android:lineHeight">32sp</item>
         <item name="android:textSize">24sp</item>
     </style>
@@ -164,7 +164,7 @@
     <style name="TextAppearance.GestureTutorial.MainTitle"
         parent="TextAppearance.GestureTutorial">
         <item name="android:textSize">36sp</item>
-        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
     </style>
 
     <style name="TextAppearance.GestureTutorial.MainTitle.Home"
@@ -255,7 +255,7 @@
 
     <style name="TextAppearance.TaskbarEduTooltip.Title" parent="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle">
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
         <item name="android:textSize">24sp</item>
     </style>
 
