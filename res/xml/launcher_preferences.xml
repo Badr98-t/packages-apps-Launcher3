@@ -47,6 +47,16 @@
         android:defaultValue="true"
         android:persistent="true"/>
 
+
+    <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+        android:key="pref_app_drawer_opacity"
+        android:title="@string/background_opacity_title"
+        android:persistent="true"
+        android:max="100"
+        android:min="0"
+        settings:units="%"
+        android:defaultValue="100" />
+
     <SwitchPreference
         android:key="pref_hide_top_shadow"
         android:title="@string/hide_top_shadow_title"
