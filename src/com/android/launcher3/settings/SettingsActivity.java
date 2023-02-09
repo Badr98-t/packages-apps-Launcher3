@@ -338,6 +338,9 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
                     preference.setEnabled(isGsaEnabled());
                     return true;
 
+                case Utilities.KEY_ACTION_TOAST_ENABLED:
+                    return true;
+
                 case KEY_SMARTSPACE:
                     preference.setEnabled(isGsaEnabled() && isAsiEnabled());
                     return true;
