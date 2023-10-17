@@ -1577,8 +1577,7 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         long now = SystemClock.uptimeMillis();
         if (now - mScrollLastHapticTimestamp > mScrollHapticMinGapMillis) {
             mScrollLastHapticTimestamp = now;
-            VibratorWrapper.INSTANCE.get(mContext).vibrate(SCROLL_VIBRATION_PRIMITIVE,
-                    SCROLL_VIBRATION_PRIMITIVE_SCALE, SCROLL_VIBRATION_FALLBACK);
+            VibratorWrapper.INSTANCE.get(getContext()).vibrate(VibratorWrapper.EFFECT_CLICK);
         }
     }
 
