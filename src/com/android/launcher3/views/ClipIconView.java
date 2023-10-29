@@ -60,6 +60,7 @@ public class ClipIconView extends View implements ClipPathView {
 
     private static final Rect sTmpRect = new Rect();
     private static final Rect mRect = new Rect();
+    private static final Rect sTmpRectFG = new Rect();
 
     private final int mBlurSizeOutline;
     private final boolean mIsRtl;
@@ -172,16 +173,18 @@ public class ClipIconView extends View implements ClipPathView {
                     : (int) (((height * drawableScale) - height) / 2);
             int diffX = dp.isLandscape ? (int) (((width * drawableScale) - width) / 2)
                     : 0;
-            sTmpRect.set(mRect);
+            sTmpRectFG.set(mRect);
+	    sTmpRect.set(mFinalDrawableBounds);
             sTmpRect.offset(diffX, diffY);
-            mForeground.setBounds(sTmpRect);
+	    sTmpRectFG.offset(diffX, diffY);
+            mForeground.setBounds(sTmpRectFG);
         }
         invalidate();
         invalidateOutline();
     }
 
     private void setBackgroundDrawableBounds(float scale, boolean isLandscape) {
-        sTmpRect.set(mRect);
+        sTmpRect.set(mFinalDrawableBounds);
         Utilities.scaleRectAboutCenter(sTmpRect, scale);
         // Since the drawable is at the top of the view, we need to offset to keep it centered.
         if (isLandscape) {
