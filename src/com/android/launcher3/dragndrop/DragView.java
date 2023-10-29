@@ -302,7 +302,10 @@ public abstract class DragView<T extends Context & ActivityContext> extends Fram
                 if (mFgSpringDrawable == null) {
                     mFgSpringDrawable = new ColorDrawable(Color.TRANSPARENT);
                 }
-                mFgSpringDrawable.setBounds(bounds);
+		Rect mRect = new Rect();
+		mRect.set(bounds);
+        	mRect.inset(bounds.width()/4, bounds.height()/4);
+		mFgSpringDrawable.setBounds(mRect);
 
                 new Handler(Looper.getMainLooper()).post(() -> mOnDragStartCallback.add(() -> {
                     // TODO: Consider fade-in animation
