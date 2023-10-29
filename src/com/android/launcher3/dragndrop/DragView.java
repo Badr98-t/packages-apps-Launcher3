@@ -62,6 +62,7 @@ import com.android.launcher3.icons.FastBitmapDrawable;
 import com.android.launcher3.icons.LauncherIcons;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.util.RunnableList;
+import com.android.launcher3.util.Themes;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.BaseDragLayer;
 
@@ -304,7 +305,10 @@ public abstract class DragView<T extends Context & ActivityContext> extends Fram
                 }
 		Rect mRect = new Rect();
 		mRect.set(bounds);
-        	mRect.inset(bounds.width()/4, bounds.height()/4);
+
+        	if(Themes.isThemedIconEnabled(mActivity))
+		    mRect.inset(bounds.width()/4, bounds.height()/4);
+
 		mFgSpringDrawable.setBounds(mRect);
 
                 new Handler(Looper.getMainLooper()).post(() -> mOnDragStartCallback.add(() -> {
