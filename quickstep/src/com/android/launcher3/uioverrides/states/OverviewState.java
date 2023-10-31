@@ -25,8 +25,6 @@ import android.view.CrossWindowBlurListeners;
 
 import androidx.core.graphics.ColorUtils;
 
-import androidx.core.graphics.ColorUtils;
-
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherPrefs;
@@ -152,9 +150,11 @@ public class OverviewState extends LauncherState {
 
     @Override
     public int getWorkspaceScrimColor(Launcher launcher) {
-        return CrossWindowBlurListeners.getInstance().isCrossWindowBlurEnabled()
-                ? launcher.getResources().getColor(R.color.overview_blur_scrim)
-                : Themes.getAttrColor(launcher, R.attr.overviewScrimColor), 15);
+        int color = Themes.getAttrColor(launcher, R.attr.overviewScrimColor);
+        if (CrossWindowBlurListeners.getInstance().isCrossWindowBlurEnabled()) {
+            return ColorUtils.setAlphaComponent(color, 15);
+        }
+        return color;
     }
 
     @Override
