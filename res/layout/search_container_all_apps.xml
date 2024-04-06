@@ -33,9 +33,10 @@
     android:paddingEnd="12dp"
     android:drawablePadding="8dp"
     android:drawableStart="@drawable/ic_allapps_search"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
     android:saveEnabled="false"
     android:scrollHorizontally="true"
     android:singleLine="true"
-    android:textColor="?android:attr/textColorSecondary"
-    android:textColorHint="@drawable/all_apps_search_hint"
+    android:textColor="?android:textColorTertiary"
     android:textSize="20sp" />
