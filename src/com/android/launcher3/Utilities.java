@@ -867,6 +867,14 @@ public final class Utilities {
         }
     }
 
+    public static boolean isASIEnabled(Context context) {
+        try {
+            return context.getPackageManager().getApplicationInfo(ASI_PACKAGE, 0).enabled;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
     public static void restart(final Context context) {
         MODEL_EXECUTOR.execute(() -> {
             try {
