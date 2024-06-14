@@ -867,6 +867,7 @@ public final class Utilities {
         }
     }
 
+
     public static void restart(final Context context) {
         MODEL_EXECUTOR.execute(() -> {
             try {
