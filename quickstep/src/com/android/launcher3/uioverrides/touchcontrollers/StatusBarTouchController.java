@@ -100,7 +100,7 @@ public class StatusBarTouchController implements TouchController {
 
     private void updateFasterSbExpansion() {
         mFasterSbExpansion = Settings.Secure.getIntForUser(mLauncher.getContentResolver(),
-                STATUS_BAR_QUICK_QS_PULLDOWN, 1, UserHandle.USER_CURRENT) == 1;
+                STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT) == 1;
 
         // Guard against TAPs by increasing the touch slop.
         int touchSlopMultiplier = mFasterSbExpansion ? 4 : 2;
