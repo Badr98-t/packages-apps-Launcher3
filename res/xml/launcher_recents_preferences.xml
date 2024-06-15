@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+b<?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2016-2024 crDroid Android Project
 
@@ -30,6 +30,7 @@
             android:min="0"
             settings:units="%"
             android:defaultValue="40" />
+<<<<<<< HEAD
 
         <SwitchPreference
             android:key="pref_recents_clear_all"

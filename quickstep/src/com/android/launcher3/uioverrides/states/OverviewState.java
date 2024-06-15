@@ -153,10 +153,8 @@ public class OverviewState extends LauncherState {
 
     @Override
     public int getWorkspaceScrimColor(Launcher launcher) {
-        return CrossWindowBlurListeners.getInstance().isCrossWindowBlurEnabled()
-                ? launcher.getResources().getColor(R.color.overview_blur_scrim)
-                : ColorUtils.setAlphaComponent(
-                Themes.getAttrColor(launcher, R.attr.overviewScrimColor), 70 * 255 / 100);
+        return ColorUtils.setAlphaComponent(
+                Themes.getAttrColor(launcher, R.attr.overviewScrimColor), Utilities.getRecentsOpacity(launcher) * 255 / 100);
     }
 
     @Override
