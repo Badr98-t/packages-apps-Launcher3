@@ -122,8 +122,14 @@ public class AllAppsSearchBarController
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 
         if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_GO) {
+            // Skip if the query is empty
+            String query = v.getText().toString();
+            if (query.isEmpty()) {
+                return false;
+            }
+
             // selectFocusedView should return SearchTargetEvent that is passed onto onClick
-            return mLauncher.getAppsView().getMainAdapterProvider().launchHighlightedItem();
+            return mLauncher.getAppsView().getMainAdapterProvider().performGoogleSearch(v, query);
         }
         return false;
     }
